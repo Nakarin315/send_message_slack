@@ -5,7 +5,7 @@ from time import perf_counter
 # Ref: https://youtu.be/lEQ68HhpO4g Slack API Tutorial: Post Slack Messages Using Python!
 
 # Send Slack message using Slack API
-# Slack alerts-strontium URL: 'https://hooks.slack.com/services/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'
+# Slack alerts-strontium URL: 'https://hooks.slack.com/services/_______'
 
 class MessageSender:
     def __init__(self, delay=300):
@@ -21,6 +21,6 @@ class MessageSender:
     @staticmethod
     def _send_slack_message(message):
         payload = '{"text":"%s"}' % message
-        response = requests.post('https://hooks.slack.com/services/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',data=payload)
+        response = requests.post('https://hooks.slack.com/services/_______',data=payload)
 
 send_slack_message = MessageSender().send_slack_message
